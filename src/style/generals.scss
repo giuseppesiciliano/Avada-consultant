@@ -5,7 +5,21 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+// Container
 .container {
     width: 80%;
     margin: auto;
+}
+
+// Lists
+ul {
+    list-style-type: none;
+    
+    a {
+        text-decoration: none;
+    }
 }

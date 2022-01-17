@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <Header />
+    <Header :linksArray="links" :service="callService"/>
   </div>
 </template>
 
@@ -12,6 +12,37 @@ export default {
   name: "App",
   components: {
     Header,
+  },
+  data: function() {
+    return {
+      links: [
+        {
+          text: 'Home',
+          url: '#'
+        },
+        {
+          text: 'Services',
+          url: '#'
+        },
+        {
+          text: 'Why Us',
+          url: '#'
+        },
+        {
+          text: 'Case Studies',
+          url: '#'
+        },
+        {
+          text: 'About',
+          url: '#'
+        },
+        {
+          text: 'Blog',
+          url: '#'
+        }
+      ],
+      callService: '(555) 802-1234'
+    }
   },
 };
 </script>
