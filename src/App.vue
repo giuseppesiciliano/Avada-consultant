@@ -2,7 +2,8 @@
   <div id="app">
 
     <Header :linksArray="links" :service="callService"/>
-    <Jumbotron />
+    <Jumbotron :expert="expertConsultant" />
+    <Row />
   </div>
 </template>
 
@@ -21,30 +22,42 @@ export default {
       links: [
         {
           text: 'Home',
-          url: '#'
+          url: '#',
+          dropDown: true
         },
         {
           text: 'Services',
-          url: '#'
+          url: '#',
+          dropDown: true
         },
         {
           text: 'Why Us',
-          url: '#'
+          url: '#',
+          dropDown: false
         },
         {
           text: 'Case Studies',
-          url: '#'
+          url: '#',
+          dropDown: false
         },
         {
           text: 'About',
-          url: '#'
+          url: '#',
+          dropDown: false
         },
         {
           text: 'Blog',
-          url: '#'
+          url: '#',
+          dropDown: false
         }
       ],
-      callService: '(555) 802-1234'
+      callService: '(555) 802-1234',
+      expertConsultant: {
+        img: '../assets/marketing-consultant-expert.jpg',
+        name: 'Richard Madsen',
+        job: 'Marketing Consultant Expert',
+        number: '(555) 802-1234',
+      }
     }
   },
 };

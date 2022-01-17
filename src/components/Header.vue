@@ -14,6 +14,7 @@
                 <li v-for="(link, index) in linksArray" :key="index">
                     <a :href="link.url">
                         {{link.text}}
+                        <span v-if="link.dropDown"><i class="fa-solid fa-angle-down"></i></span>
                     </a>
                 </li>
             </ul>
@@ -48,7 +49,7 @@ export default {
   name: "Header",
   props: {
       linksArray: Array,
-      service: String
+      service: String,
   }
   
 }
@@ -63,7 +64,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    height: 110px;
+    height: 100px;
 
     ul {
         display: flex;
@@ -71,6 +72,8 @@ header {
         li {
             padding-left: 30px;
             font-size: 19px;
+            display: flex;
+            align-items: center;
             
             a {
                 color: black;
