@@ -30,11 +30,7 @@ export default {
   name: "Jumbotron",
   components: {
     ExpertConsultant,
-  },
-  props: {
-    expert: Object
-  }
-  
+  },  
 }
 </script>
 
@@ -75,6 +71,11 @@ export default {
         padding-left: 10px;
       }
     }
+  }
+
+  .expert-consultant {
+    position: relative;
+    top: -20px;
   }
 
   

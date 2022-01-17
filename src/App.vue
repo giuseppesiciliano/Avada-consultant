@@ -2,20 +2,22 @@
   <div id="app">
 
     <Header :linksArray="links" :service="callService"/>
-    <Jumbotron :expert="expertConsultant" />
-    <Row />
+    <Jumbotron />
+    <Main />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Jumbotron from "./components/Jumbotron.vue";
+import Main from "./components/Main.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Jumbotron,
+    Main,
   },
   data: function() {
     return {
@@ -52,12 +54,6 @@ export default {
         }
       ],
       callService: '(555) 802-1234',
-      expertConsultant: {
-        img: '../assets/marketing-consultant-expert.jpg',
-        name: 'Richard Madsen',
-        job: 'Marketing Consultant Expert',
-        number: '(555) 802-1234',
-      }
     }
   },
 };
