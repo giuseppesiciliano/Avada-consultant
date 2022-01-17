@@ -21,7 +21,23 @@
 
         <!-- Servizi -->
         <div class="services">
-            <i class="fa-solid fa-phone"></i>{{service}}
+
+            <ul>
+                <li class="number">
+                    <a href="#">
+                        <i class="fa-solid fa-phone"></i>{{service}}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="secondary-button"> 
+                            Free Quote
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </header>
 </template>
@@ -32,7 +48,7 @@ export default {
   name: "Header",
   props: {
       linksArray: Array,
-      service: Object
+      service: String
   }
   
 }
@@ -40,33 +56,38 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '../style/variables';
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 100px;
-    background-color: pink;
+    height: 110px;
 
-    nav ul {
+    ul {
         display: flex;
         
         li {
-            padding-left: 40px;
+            padding-left: 30px;
             font-size: 19px;
             
             a {
                 color: black;
+                padding: 5px 10px;
             }
         }
     }
-
+    nav a:hover {
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color ;
+    }
     .services {
         padding-left: 50px;
         font-size: 19px;
 
         i {
-            color: #f86011;
+            color: $primary-color;
             padding-right: 18px;
         }
     }
