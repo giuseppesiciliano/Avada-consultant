@@ -3,6 +3,7 @@
         
         <SingleRowBenefit v-for="(benefits, index) in benefits" :key="index" :benefitsArray="benefits" />
         <BrandsWeWork />
+        <Leads />
     </main>
 </template>
 
@@ -10,12 +11,14 @@
 <script>
 import SingleRowBenefit from "./SingleRowBenefit.vue";
 import BrandsWeWork from "./BrandsWeWork.vue";
+import Leads from "./Leads.vue";
 
 export default {
   name: "Main", 
   components: {
     SingleRowBenefit,
     BrandsWeWork,
+    Leads,
   },
   data: function() {
     return {
