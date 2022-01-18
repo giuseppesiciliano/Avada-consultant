@@ -74,6 +74,7 @@ export default {
   }
 
   .expert-consultant {
+    padding-left: 50px;
     position: relative;
     top: -20px;
   }
