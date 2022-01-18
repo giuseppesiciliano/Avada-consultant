@@ -16,7 +16,7 @@
         
                 <h3>{{benefitsArray.title}}</h3>
 
-                <p>{{benefitsArray.subTitle}}</p>
+                <p class="p-section">{{benefitsArray.subTitle}}</p>
 
                 <a class="primary-button" href="#">
                     {{benefitsArray.button}}
@@ -66,8 +66,11 @@ export default {
             padding: 20px 0;
         }
         p {
-            font-size: 22px;
             padding-bottom: 25px;
+        }
+        .primary-button:hover {
+            background-color: #e9570b;
+            transition: 0.2s;
         }
     }
 }

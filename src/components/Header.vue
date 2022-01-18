@@ -84,6 +84,7 @@ header {
     nav a:hover {
         color: $primary-color;
         border-bottom: 2px solid $primary-color ;
+        padding-bottom: 3px;
     }
     .services {
         padding-left: 50px;
@@ -92,6 +93,10 @@ header {
         i {
             color: $primary-color;
             padding-right: 18px;
+        }
+        .secondary-button:hover {
+            color: white;
+            background-color: $primary-color;
         }
     }
 }

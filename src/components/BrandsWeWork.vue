@@ -1,9 +1,9 @@
 <template>
     <div class="brands-area">
 
-        <h2>Some Brands We Work With</h2>
+        <h2 class="title-section">Some Brands We Work With</h2>
 
-        <p>Quisque aliquet, libero consequat elementum convallis</p>
+        <p class="p-section">Quisque aliquet, libero consequat elementum convallis</p>
 
         <ul class="brands-list">
             <li v-for="(brands, index) in brands" :key="index">
@@ -58,15 +58,13 @@ export default {
 
 
 <style lang="scss" scoped>
+@import '../style/commons';
+
 .brands-area {
     padding-top: 200px;
     text-align: center;
 
-    h2 {
-        font-size: 50px;
-    }
     p {
-        font-size: 20px;
         padding-top: 20px;
     }
 

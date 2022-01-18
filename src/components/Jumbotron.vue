@@ -8,9 +8,10 @@
           <h2>Unlock Your Online Growth Potential</h2>
           <p>Online Marketing to secure customer retention, leads, and sales. We focus on the bigger picture.</p>
 
-          <div class="white-button">
+          <a class="white-button" href="#">
             Our Services <i class="fa-solid fa-arrow-right"></i>
-          </div>
+          </a>
+        
         </div>
 
         <!-- Expert consultant -->
@@ -70,6 +71,11 @@ export default {
       i {
         padding-left: 10px;
       }
+    }
+    .white-button:hover {
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      border: 1px solid white;
     }
   }
 

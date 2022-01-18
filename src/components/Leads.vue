@@ -1,6 +1,7 @@
 <template>
     <div class="content">
 
+        <!-- Bar Consultant Expert -->
         <div class="bar">
 
             <!-- Profile -->
@@ -19,7 +20,7 @@
             </div>
 
             <!-- Title -->
-            <h3>Drive Leads and Sales with Avada</h3>
+            <h2>Drive Leads and Sales with Avada</h2>
 
             <!-- Number -->
             <a href="#">
@@ -27,6 +28,16 @@
                     <i class="fa-solid fa-phone"></i> (555) 802-1234
                 </span>
             </a>
+        </div>
+
+        <!-- Leading Organisations -->
+        <div class="lead-organisations">
+
+            <h2 class="title-section">Trusted by Leading Organisations</h2>
+
+            <div class="organisation-col">
+                
+            </div>
         </div>
     </div>
 </template>
@@ -41,7 +52,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../style/variables';
+@import '../style/commons';
 
+// Bar Consultant Expert
 .bar {
     display: flex;
     justify-content: space-between;
@@ -76,7 +89,7 @@ export default {
     }
 
     // Title
-    h3 {
+    h2 {
         font-size: 25px;
     }
 
@@ -85,6 +98,9 @@ export default {
         font-size: 20px;
         font-weight: bold;
     }
+}
 
+.lead-organisations {
+    text-align: center;
 }
 </style>
