@@ -52,7 +52,8 @@ export default {
                 button: 'Get a Consultation',
                 isReverse: false
             },
-        ]
+        ],
+        
     }
   }
 }
