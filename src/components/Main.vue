@@ -1,9 +1,9 @@
 <template>
-    <main class="container">
-        
+    <main>
         <SingleRowBenefit v-for="(benefits, index) in benefits" :key="index" :benefitsArray="benefits" />
         <BrandsWeWork />
         <Leads />
+        <References />
     </main>
 </template>
 
@@ -12,6 +12,7 @@
 import SingleRowBenefit from "./SingleRowBenefit.vue";
 import BrandsWeWork from "./BrandsWeWork.vue";
 import Leads from "./Leads.vue";
+import References from "./References.vue";
 
 export default {
   name: "Main", 
@@ -19,6 +20,7 @@ export default {
     SingleRowBenefit,
     BrandsWeWork,
     Leads,
+    References,
   },
   data: function() {
     return {

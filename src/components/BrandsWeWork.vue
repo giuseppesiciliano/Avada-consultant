@@ -1,5 +1,5 @@
 <template>
-    <div class="brands-area">
+    <div class="container brands-area">
 
         <h2 class="title-section">Some Brands We Work With</h2>
 

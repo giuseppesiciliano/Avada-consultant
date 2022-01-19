@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="container">
         <div class="row" :class="{'reverse' :benefitsArray.isReverse}">
         
             <!-- Logo -->
@@ -67,10 +67,6 @@ export default {
         }
         p {
             padding-bottom: 25px;
-        }
-        .primary-button:hover {
-            background-color: #e9570b;
-            transition: 0.2s;
         }
     }
 }

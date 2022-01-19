@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="container">
 
         <!-- Bar Consultant Expert -->
         <div class="bar">
@@ -36,8 +36,27 @@
             <h2 class="title-section">Trusted by Leading Organisations</h2>
 
             <div class="organisation-col">
-                
+
+                <!-- Singol Card -->
+                <div v-for="(organisation, index) in organisation" :key="index" class="single-card">
+
+                    <!-- Imagine -->
+                    <img :src="organisation.thumb" :alt="organisation.alt">
+
+                    <!-- Title -->
+                    <h3>{{organisation.title}}</h3>
+
+                    <!-- Benefits -->
+                    <div>{{organisation.benefit}}</div>
+                    <span>{{organisation.subBenefit}}</span>
+                </div>
+
             </div>
+
+            <!-- Button -->
+            <a class="primary-button" href="#">
+                Read More Case Studies
+            </a>
         </div>
     </div>
 </template>
@@ -45,7 +64,34 @@
 
 <script>
 export default {
-  name: "Leads", 
+    name: "Leads",
+    data: function() {
+        return {
+            organisation: [
+                {
+                    thumb: require('../assets/case-studies-1-400x450.jpg'),
+                    alt: 'thumb organisation',
+                    title: 'How Spaces attracted five million visitors by improving the content',
+                    benefit: '200%',
+                    subBenefit: 'Higher revenue from digital'
+                },
+                {
+                    thumb: require('../assets/case-studies-4-400x450.jpg'),
+                    alt: 'thumb organisation',
+                    title: 'Creativity helped Hemisferio to increase their brand reach vertically',
+                    benefit: '10x',
+                    subBenefit: 'Sales increase with the same ad spend'
+                },
+                {
+                    thumb: require('../assets/case-studies-6-400x450.jpg'),
+                    alt: 'thumb organisation',
+                    title: 'How DigitalBox used Al-powered data insight to boost sales',
+                    benefit: '3-years',
+                    subBenefit: 'Partnership with Avada Consultant'
+                },
+            ]
+        }
+    } 
 }
 </script>
 
@@ -102,5 +148,39 @@ export default {
 
 .lead-organisations {
     text-align: center;
+
+    .organisation-col {
+        display: flex;
+        justify-content: space-around;
+
+        .single-card {
+            padding-top: 100px;
+            text-align: left;
+            width: 400px;
+
+            h3 {
+                font-size: 30px;
+                padding: 20px 0;
+            }
+            h3::after {
+                content: "";
+                border: 1px dashed lightgray;
+                margin-top: 20px;
+                width: 100%;
+                display: block;
+            }
+            div {
+                font-size: 50px;
+                font-weight: bold;
+            }
+            span {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .primary-button {
+        margin: 80px 0 130px 0;
+    }
 }
 </style>

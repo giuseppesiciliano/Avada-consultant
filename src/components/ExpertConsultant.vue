@@ -47,7 +47,6 @@ export default {
 
 .expert-consultant {
     text-align: center;
-    margin-left: 100px;
     height: 650px;
     width: 480px;
 

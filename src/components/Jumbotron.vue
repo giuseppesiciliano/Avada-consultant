@@ -80,7 +80,7 @@ export default {
   }
 
   .expert-consultant {
-    padding-left: 50px;
+    margin-left: 150px;
     position: relative;
     top: -20px;
   }
