@@ -78,6 +78,14 @@
             <!-- AWARDS -->
             <div class="awards">
                 <h2>Awards</h2>
+
+                <ul class="awards-list">
+                    <li>
+                        <img src="../assets/award-a-200x191.png" alt="">
+                        <span>Winner Seo Master MAGT</span>
+                        <span>Smart Start Award 2017</span>
+                    </li>
+                </ul>
             </div>
 
 
@@ -163,9 +171,27 @@ export default {
     // AWARDS
     .awards {
         padding-top: 50px;
-        
+
         h2 {
             text-align: center;
+        }
+
+        .awards-list {
+            display: flex;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                img {
+                    width: 160px;
+                }
+                span {
+                    font-size: 18px;
+                    padding-bottom: 10px;
+                }
+            }
         }
     }
 }
