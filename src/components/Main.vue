@@ -4,6 +4,8 @@
         <BrandsWeWork />
         <Leads />
         <References />
+        <Testimonial />
+
     </main>
 </template>
 
@@ -13,6 +15,7 @@ import SingleRowBenefit from "./SingleRowBenefit.vue";
 import BrandsWeWork from "./BrandsWeWork.vue";
 import Leads from "./Leads.vue";
 import References from "./References.vue";
+import Testimonial from "./Testimonial.vue";
 
 export default {
   name: "Main", 
@@ -21,6 +24,7 @@ export default {
     BrandsWeWork,
     Leads,
     References,
+    Testimonial,
   },
   data: function() {
     return {
@@ -53,7 +57,7 @@ export default {
                 isReverse: false
             },
         ],
-        
+
     }
   }
 }
