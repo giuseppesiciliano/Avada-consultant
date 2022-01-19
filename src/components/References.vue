@@ -80,10 +80,10 @@
                 <h2>Awards</h2>
 
                 <ul class="awards-list">
-                    <li>
-                        <img src="../assets/award-a-200x191.png" alt="">
-                        <span>Winner Seo Master MAGT</span>
-                        <span>Smart Start Award 2017</span>
+                    <li v-for="(awards, index) in awards" :key="index">
+                        <img :src="awards.thumb" :alt="awards.alt">
+                        <span>{{awards.name}}</span>
+                        <span>{{awards.info}}</span>
                     </li>
                 </ul>
             </div>
@@ -96,6 +96,36 @@
 <script>
 export default {
     name: "References",
+    data: function() {
+        return {
+            awards: [
+                {
+                    name: 'Winner Seo Master MAGT',
+                    info: 'Smart Start Award 2017',
+                    thumb: require("../assets/award-a-200x191.png"),
+                    alt: 'logo award seo master magt',
+                },
+                {
+                    name: 'Top Social Media Agencies',
+                    info: 'Next Partner 2018',
+                    thumb: require("../assets/award-b-200x191.png"),
+                    alt: 'logo award top social media agencies',
+                },
+                {
+                    name: '10 Fastest Growing Abstract',
+                    info: 'Solution Providers 2019',
+                    thumb: require("../assets/award-c-200x191.png"),
+                    alt: 'logo award 10 fastest growing abstract',
+                },
+                {
+                    name: 'National Excellence Agencie',
+                    info: 'Award Winner 2020',
+                    thumb: require("../assets/award-d-200x191.png"),
+                    alt: 'logo award national excellence agencie',
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -170,19 +200,22 @@ export default {
 
     // AWARDS
     .awards {
-        padding-top: 50px;
+        padding-top: 100px;
+        padding-bottom: 100px;
 
         h2 {
             text-align: center;
+            padding-bottom: 80px;
         }
 
         .awards-list {
             display: flex;
+            justify-content: space-around;
 
             li {
                 display: flex;
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
 
                 img {
                     width: 160px;
