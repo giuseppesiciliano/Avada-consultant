@@ -41,7 +41,10 @@
                 <div v-for="(organisation, index) in organisation" :key="index" class="single-card">
 
                     <!-- Imagine -->
-                    <img :src="organisation.thumb" :alt="organisation.alt">
+                    <div class="image">
+                        <img :src="organisation.thumb" :alt="organisation.alt">
+                        <div class="overlay"></div>
+                    </div>
 
                     <!-- Title -->
                     <h3>{{organisation.title}}</h3>
@@ -133,6 +136,7 @@ export default {
             }
         }
     }
+    
 
     // Title
     h2 {
@@ -175,6 +179,30 @@ export default {
             }
             span {
                 font-size: 18px;
+            }
+            .image {
+                height: 450px;
+                width: 400px;
+                position: relative;
+
+                img {
+                    display: block;
+                }
+                .overlay {
+                    transition: opacity 1s;
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    background: rgb(255,145,27);
+                    background: linear-gradient(0deg, rgba(214,93,0,0.6558998599439776) 40%, rgba(255,255,255,0) 94%);
+                }
+            }
+            .image:hover .overlay {
+                opacity: 1;
             }
         }
     }

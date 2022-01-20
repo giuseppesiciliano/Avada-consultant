@@ -5,6 +5,7 @@
         <Leads />
         <References />
         <Testimonial />
+        <MarketingResources />
 
     </main>
 </template>
@@ -16,6 +17,7 @@ import BrandsWeWork from "./BrandsWeWork.vue";
 import Leads from "./Leads.vue";
 import References from "./References.vue";
 import Testimonial from "./Testimonial.vue";
+import MarketingResources from "./MarketingResources.vue";
 
 export default {
   name: "Main", 
@@ -25,6 +27,7 @@ export default {
     Leads,
     References,
     Testimonial,
+    MarketingResources,
   },
   data: function() {
     return {

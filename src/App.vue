@@ -4,6 +4,8 @@
     <Header :linksArray="links" :service="callService"/>
     <Jumbotron />
     <Main />
+    <Footer />
+
   </div>
 </template>
 
@@ -11,6 +13,7 @@
 import Header from "./components/Header.vue";
 import Jumbotron from "./components/Jumbotron.vue";
 import Main from "./components/Main.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -18,6 +21,7 @@ export default {
     Header,
     Jumbotron,
     Main,
+    Footer
   },
   data: function() {
     return {
